@@ -1,5 +1,5 @@
 # TsetlinMachine-Connect4
-University project in the course ICT Seminar 3. Using Tsetlin Machine for the game Connect Four.
+University project in the course ICT Seminar 3. Using Tsetlin Machine for the game Connect Four. Based on the Tsetlin Machine implementation from https://github.com/cair/pyTsetlinMachine.
 
 ## License
 MIT License
