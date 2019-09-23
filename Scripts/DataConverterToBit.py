@@ -56,7 +56,7 @@ for line in file:
         ii = 1
         for m in new_data_line_list:
             if ii < len(new_data_line_list):
-                new_file.write(str(m) + " ")
+                new_file.write(str(m) + ",")
             else:
                 new_file.write(str(m))
             ii += 1
