@@ -1,0 +1,50 @@
+tm = MultiClassTsetlinMachine(10000, 80, 27, boost_true_positive_feedback=0)
+epoch = 200
+90/10 split
+
+/usr/bin/python3.6 /home/kristoffer/Documents/IKT441_Workplace/Tsetlin-Machine-Connect4/TsetlinMachine-Connect4/Connect4Demo.py
+
+Accuracy over 200 epochs:
+
+#1 Accuracy: 76.37% (41.64s)
+#2 Accuracy: 77.66% (39.28s)
+#3 Accuracy: 77.88% (38.82s)
+#4 Accuracy: 79.25% (38.44s)
+#5 Accuracy: 80.17% (38.05s)
+#6 Accuracy: 80.66% (39.04s)
+#7 Accuracy: 80.49% (37.66s)
+#8 Accuracy: 81.02% (37.47s)
+#9 Accuracy: 80.66% (37.28s)
+#10 Accuracy: 80.97% (37.24s)
+#11 Accuracy: 81.02% (37.21s)
+#12 Accuracy: 81.30% (37.46s)
+#13 Accuracy: 81.51% (36.92s)
+#14 Accuracy: 81.15% (38.80s)
+#15 Accuracy: 81.13% (37.38s)
+#16 Accuracy: 80.99% (37.15s)
+#17 Accuracy: 81.38% (36.84s)
+#18 Accuracy: 81.15% (36.52s)
+#19 Accuracy: 81.44% (38.85s)
+#20 Accuracy: 81.28% (36.98s)
+#21 Accuracy: 81.08% (37.09s)
+#22 Accuracy: 81.30% (37.61s)
+#23 Accuracy: 81.38% (36.33s)
+#24 Accuracy: 81.25% (36.31s)
+#25 Accuracy: 81.23% (36.30s)
+#26 Accuracy: 81.15% (36.23s)
+#27 Accuracy: 81.39% (36.12s)
+#28 Accuracy: 81.28% (36.17s)
+#29 Accuracy: 80.92% (36.18s)
+#30 Accuracy: 81.31% (36.12s)
+#31 Accuracy: 81.64% (37.67s)
+#32 Accuracy: 81.41% (36.09s)
+#33 Accuracy: 81.64% (36.50s)
+#34 Accuracy: 81.46% (36.22s)
+#35 Accuracy: 81.13% (36.34s)
+#36 Accuracy: 80.67% (35.91s)
+#37 Accuracy: 80.79% (35.96s)
+#38 Accuracy: 80.82% (38.61s)
+#39 Accuracy: 81.12% (38.41s)
+
+Process finished with exit code 137 (interrupted by signal 9: SIGKILL)
+
