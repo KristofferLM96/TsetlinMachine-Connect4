@@ -1,0 +1,62 @@
+tm = MultiClassTsetlinMachine(20000, 80, 27, boost_true_positive_feedback=0)
+epochs = 50
+90/10 split
+
+/usr/bin/python3.6 /home/kristoffer/Documents/IKT441_Workplace/Tsetlin-Machine-Connect4/TsetlinMachine-Connect4/Connect4Demo.py
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 76.94% (86.41s)
+#2 Accuracy: 78.20% (83.22s)
+#3 Accuracy: 79.30% (82.27s)
+#4 Accuracy: 80.12% (81.11s)
+#5 Accuracy: 80.90% (80.88s)
+#6 Accuracy: 81.28% (80.30s)
+#7 Accuracy: 81.35% (80.43s)
+#8 Accuracy: 81.26% (79.57s)
+#9 Accuracy: 81.30% (79.31s)
+#10 Accuracy: 81.71% (79.02s)
+#11 Accuracy: 81.49% (78.52s)
+#12 Accuracy: 81.79% (78.58s)
+#13 Accuracy: 82.38% (78.85s)
+#14 Accuracy: 82.11% (78.10s)
+#15 Accuracy: 81.93% (77.95s)
+#16 Accuracy: 81.92% (77.92s)
+#17 Accuracy: 81.80% (77.80s)
+#18 Accuracy: 82.02% (77.63s)
+#19 Accuracy: 82.02% (77.46s)
+#20 Accuracy: 82.20% (77.46s)
+#21 Accuracy: 82.21% (77.31s)
+#22 Accuracy: 81.85% (77.23s)
+#23 Accuracy: 82.07% (77.27s)
+#24 Accuracy: 82.21% (77.74s)
+#25 Accuracy: 82.36% (77.10s)
+#26 Accuracy: 82.47% (77.03s)
+#27 Accuracy: 82.20% (77.02s)
+#28 Accuracy: 82.23% (76.98s)
+#29 Accuracy: 82.36% (77.03s)
+#30 Accuracy: 82.05% (76.79s)
+#31 Accuracy: 82.20% (76.65s)
+#32 Accuracy: 82.39% (76.67s)
+#33 Accuracy: 82.02% (76.87s)
+#34 Accuracy: 81.75% (76.66s)
+#35 Accuracy: 82.05% (76.54s)
+#36 Accuracy: 82.15% (76.42s)
+#37 Accuracy: 82.18% (76.42s)
+#38 Accuracy: 82.47% (76.37s)
+#39 Accuracy: 82.36% (76.28s)
+#40 Accuracy: 82.23% (76.20s)
+#41 Accuracy: 82.16% (76.18s)
+#42 Accuracy: 82.21% (76.08s)
+#43 Accuracy: 82.11% (76.13s)
+#44 Accuracy: 82.10% (76.01s)
+#45 Accuracy: 82.31% (75.92s)
+#46 Accuracy: 82.11% (75.84s)
+#47 Accuracy: 82.43% (76.94s)
+#48 Accuracy: 82.15% (76.21s)
+#49 Accuracy: 82.28% (76.01s)
+#50 Accuracy: 82.13% (75.93s)
+Accuracy: 82.13058419243985
+
+Process finished with exit code 0
+
