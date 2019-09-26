@@ -15,16 +15,14 @@ X_test = X[int(len(X) * split_ratio):]
 Y_train = Y[:int(len(Y) * split_ratio)]
 Y_test = Y[int(len(Y) * split_ratio):]
 
-tm = MultiClassTsetlinMachine(14000, 80, 27, boost_true_positive_feedback=0)
+tm = MultiClassTsetlinMachine(20000, 80, 27, boost_true_positive_feedback=0)
 
-#tm.fit(X_train, Y_train, epochs=200)
-
-print("\nAccuracy over 25 epochs:\n")
-for i in range(25):
+print("\nAccuracy over 50 epochs:\n")
+for i in range(50):
 	start = time()
 	tm.fit(X_train, Y_train, epochs=1, incremental=True)
 	stop = time()
 	result = 100*(tm.predict(X_test) == Y_test).mean()
 	print("#%d Accuracy: %.2f%% (%.2fs)" % (i+1, result, stop-start))
 
-print("Accuracy:", 100*(tm.predict(X_test) == Y_test).mean())
+print("Mean Accuracy:", 100*(tm.predict(X_test) == Y_test).mean())
