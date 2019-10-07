@@ -4,18 +4,30 @@ from time import time
 
 # Parameters
 split_ratio = 0.9
-train_data = np.loadtxt("Data/bitcode-connect-4.data", delimiter=",")
+#train_data = np.loadtxt("Data/bitcode-connect-4.data", delimiter=",")
 
-X = train_data[:, 0:-1]
-Y = train_data[:, -1]
+#X = train_data[:, 0:-1]
+#Y = train_data[:, -1]
 
-X_train = X[:int(len(X) * split_ratio)]
-X_test = X[int(len(X) * split_ratio):]
+#X_train = X[:int(len(X) * split_ratio)]
+#X_test = X[int(len(X) * split_ratio):]
 
-Y_train = Y[:int(len(Y) * split_ratio)]
-Y_test = Y[int(len(Y) * split_ratio):]
+#Y_train = Y[:int(len(Y) * split_ratio)]
+#Y_test = Y[int(len(Y) * split_ratio):]
 
-tm = MultiClassTsetlinMachine(20000, 80, 27, boost_true_positive_feedback=0)
+"""
+Audun sitt dataset.
+"""
+# *********************************************************************************** #
+train = np.loadtxt("Data/trainingdata.txt", delimiter=",")
+test = np.loadtxt("Data/testdata.txt", delimiter=",")
+X_train = train[:, 0:-1]
+X_test = test[:, 0:-1]
+Y_train = train[:, -1]
+Y_test = test[:, -1]
+# *********************************************************************************** #
+
+tm = MultiClassTsetlinMachine(10000, 80, 27, boost_true_positive_feedback=0)
 
 print("\nAccuracy over 50 epochs:\n")
 for i in range(50):
