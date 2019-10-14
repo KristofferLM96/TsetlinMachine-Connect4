@@ -19,8 +19,8 @@ iterations = 50
 shape_x = 7
 shape_y = 6
 shape_z = 2
-frame_x = 5
-frame_y = 4
+frame_x = 7
+frame_y = 6
 clauses = 10000
 T = 80
 s = 27
@@ -40,8 +40,17 @@ print(X_train.shape[3])
 
 
 test_data = np.loadtxt("Data/testdata.txt", delimiter=",")
-X_test = test_data[:, 0:-1]
+X_test = test_data[:, 0:-1].reshape(test_data.shape[0], shape_x, shape_y, shape_z)
 Y_test = test_data[:, -1]
+
+# shape[0] Should be the length of the amount of examples.
+print(X_test.shape[0])
+# shape[1] Should be the length of the x-coordinates.
+print(X_test.shape[1])
+# shape[2] Should be the length of the y-coordinates.
+print(X_test.shape[2])
+# shape[3] Should be the length of the y-coordinates.
+print(X_test.shape[3])
 
 # Version 1:
 """
