@@ -10,47 +10,29 @@ from time import time
 2. Test with different parameters for the ConvTM.
 2.1. Different sizes of the window/frame
 2.2. Possibly add more epochs. Seems to still increase after 50.
-3. Add 'Draw' to the dataset.
-4. Look at clauses. Make a draw function that display what the clauses "learn".
-
+3. Look at clauses. Make a draw function that display what the clauses "learn".
+4. Add 'Draw' to the dataset.
 """
 # Parameters
-iterations = 50
-shape_x = 7
-shape_y = 6
-shape_z = 2
-frame_x = 7
-frame_y = 6
+epochs = 100
 clauses = 10000
 T = 80
 s = 27
+
+shape_x = 7
+shape_y = 6
+shape_z = 2
+
+frame_x = 6
+frame_y = 5
 
 train_data = np.loadtxt("Data/trainingdata.txt", delimiter=",")
 X_train = train_data[:, 0:-1].reshape(train_data.shape[0], shape_x, shape_y, shape_z)
 Y_train = train_data[:, -1]
 
-# shape[0] Should be the length of the amount of examples.
-print(X_train.shape[0])
-# shape[1] Should be the length of the x-coordinates.
-print(X_train.shape[1])
-# shape[2] Should be the length of the y-coordinates.
-print(X_train.shape[2])
-# shape[3] Should be the length of the y-coordinates.
-print(X_train.shape[3])
-
-
 test_data = np.loadtxt("Data/testdata.txt", delimiter=",")
 X_test = test_data[:, 0:-1].reshape(test_data.shape[0], shape_x, shape_y, shape_z)
 Y_test = test_data[:, -1]
-
-# shape[0] Should be the length of the amount of examples.
-print(X_test.shape[0])
-# shape[1] Should be the length of the x-coordinates.
-print(X_test.shape[1])
-# shape[2] Should be the length of the y-coordinates.
-print(X_test.shape[2])
-# shape[3] Should be the length of the y-coordinates.
-print(X_test.shape[3])
 
 # Version 1:
 """
@@ -60,8 +42,8 @@ print("Accuracy:", 100*(ctm.predict(X_test) == Y_test).mean())
 """
 # Version 2:
 tm = MultiClassConvolutionalTsetlinMachine2D(clauses, T, s, (frame_x, frame_y))
-print("\nAccuracy over " + str(iterations) + " epochs:\n")
-for i in range(iterations):
+print("\nAccuracy over " + str(epochs) + " epochs:\n")
+for i in range(epochs):
     start = time()
     tm.fit(X_train, Y_train, epochs=1, incremental=True)
     stop = time()
