@@ -1,0 +1,72 @@
+iterations = 50
+shape_x = 7
+shape_y = 6
+shape_z = 2
+frame_x = 6
+frame_y = 5
+clauses = 10000
+T = 80
+s = 27
+
+/usr/bin/python3.6 /home/kristoffer/Documents/IKT441_Workplace/Tsetlin-Machine-Connect4/TsetlinMachine-Connect4/Connect4ConvDemo.py
+54998
+7
+6
+2
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 87.35% (43.33s)
+#2 Accuracy: 89.48% (40.01s)
+#3 Accuracy: 90.02% (39.28s)
+#4 Accuracy: 90.44% (38.54s)
+#5 Accuracy: 90.72% (38.48s)
+#6 Accuracy: 90.72% (37.97s)
+#7 Accuracy: 91.08% (37.53s)
+#8 Accuracy: 91.28% (37.61s)
+#9 Accuracy: 90.87% (37.45s)
+#10 Accuracy: 90.39% (37.78s)
+#11 Accuracy: 91.26% (37.84s)
+#12 Accuracy: 91.43% (37.60s)
+#13 Accuracy: 91.56% (37.43s)
+#14 Accuracy: 91.72% (37.67s)
+#15 Accuracy: 91.33% (37.30s)
+#16 Accuracy: 91.51% (37.06s)
+#17 Accuracy: 91.56% (37.06s)
+#18 Accuracy: 91.75% (37.08s)
+#19 Accuracy: 91.46% (37.01s)
+#20 Accuracy: 91.41% (37.23s)
+#21 Accuracy: 91.44% (37.47s)
+#22 Accuracy: 91.52% (37.20s)
+#23 Accuracy: 91.47% (42.42s)
+#24 Accuracy: 91.18% (43.72s)
+#25 Accuracy: 91.64% (43.16s)
+#26 Accuracy: 91.72% (39.55s)
+#27 Accuracy: 91.67% (39.96s)
+#28 Accuracy: 91.41% (41.29s)
+#29 Accuracy: 91.97% (40.58s)
+#30 Accuracy: 91.83% (41.76s)
+#31 Accuracy: 91.21% (40.50s)
+#32 Accuracy: 91.69% (41.97s)
+#33 Accuracy: 91.88% (40.66s)
+#34 Accuracy: 91.62% (43.24s)
+#35 Accuracy: 91.80% (40.20s)
+#36 Accuracy: 91.98% (38.70s)
+#37 Accuracy: 92.00% (37.81s)
+#38 Accuracy: 92.18% (38.36s)
+#39 Accuracy: 92.10% (38.37s)
+#40 Accuracy: 92.03% (38.69s)
+#41 Accuracy: 92.03% (41.66s)
+#42 Accuracy: 91.97% (37.01s)
+#43 Accuracy: 91.77% (36.90s)
+#44 Accuracy: 92.18% (36.89s)
+#45 Accuracy: 92.01% (36.82s)
+#46 Accuracy: 92.24% (36.89s)
+#47 Accuracy: 91.79% (36.83s)
+#48 Accuracy: 92.08% (36.84s)
+#49 Accuracy: 92.26% (36.80s)
+#50 Accuracy: 92.00% (36.84s)
+Mean Accuracy: 91.99803632793324
+
+Process finished with exit code 0
+
