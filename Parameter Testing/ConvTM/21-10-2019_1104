@@ -1,0 +1,127 @@
+/usr/bin/python3.6 /home/kristoffer/Documents/IKT441_Workplace/Tsetlin-Machine-Connect4/TsetlinMachine-Connect4/Connect4ConvDemo.py
+epochs =  100
+clauses =  11502
+T =  30
+s =  58.98 
+
+shape_x =  7
+shape_y =  6
+shape_z =  2 
+
+frame_x =  6
+frame_y =  5 
+
+Loading training data..
+Loading test data..
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM..
+
+Accuracy over 100 epochs:
+
+#1 Accuracy: 74.62% (5.09s)
+#2 Accuracy: 75.30% (4.45s)
+#3 Accuracy: 76.34% (4.50s)
+#4 Accuracy: 75.68% (4.18s)
+#5 Accuracy: 76.06% (4.22s)
+#6 Accuracy: 76.64% (4.22s)
+#7 Accuracy: 76.89% (3.92s)
+#8 Accuracy: 76.65% (3.85s)
+#9 Accuracy: 76.10% (4.24s)
+#10 Accuracy: 76.26% (3.80s)
+#11 Accuracy: 76.50% (3.75s)
+#12 Accuracy: 76.31% (3.73s)
+#13 Accuracy: 76.46% (3.69s)
+#14 Accuracy: 76.44% (3.66s)
+#15 Accuracy: 76.58% (3.66s)
+#16 Accuracy: 76.17% (3.61s)
+#17 Accuracy: 76.04% (3.60s)
+#18 Accuracy: 76.26% (3.72s)
+#19 Accuracy: 76.38% (3.53s)
+#20 Accuracy: 77.06% (3.92s)
+#21 Accuracy: 76.90% (3.52s)
+#22 Accuracy: 76.25% (3.53s)
+#23 Accuracy: 76.46% (3.65s)
+#24 Accuracy: 76.70% (3.84s)
+#25 Accuracy: 76.11% (3.48s)
+#26 Accuracy: 76.04% (3.69s)
+#27 Accuracy: 76.62% (3.44s)
+#28 Accuracy: 76.41% (3.45s)
+#29 Accuracy: 76.68% (3.44s)
+#30 Accuracy: 76.43% (3.45s)
+#31 Accuracy: 75.34% (3.41s)
+#32 Accuracy: 76.37% (3.41s)
+#33 Accuracy: 74.45% (3.39s)
+#34 Accuracy: 75.76% (3.39s)
+#35 Accuracy: 76.45% (3.37s)
+#36 Accuracy: 75.72% (3.34s)
+#37 Accuracy: 74.78% (3.35s)
+#38 Accuracy: 76.49% (3.37s)
+#39 Accuracy: 75.88% (3.35s)
+#40 Accuracy: 76.91% (3.35s)
+#41 Accuracy: 75.92% (3.33s)
+#42 Accuracy: 76.78% (3.29s)
+#43 Accuracy: 75.34% (3.30s)
+#44 Accuracy: 75.58% (3.31s)
+#45 Accuracy: 76.46% (3.31s)
+#46 Accuracy: 76.09% (3.31s)
+#47 Accuracy: 76.58% (3.30s)
+#48 Accuracy: 75.34% (3.30s)
+#49 Accuracy: 75.87% (3.30s)
+#50 Accuracy: 75.23% (3.27s)
+#51 Accuracy: 76.60% (3.29s)
+#52 Accuracy: 75.84% (3.28s)
+#53 Accuracy: 75.48% (3.27s)
+#54 Accuracy: 76.30% (3.27s)
+#55 Accuracy: 75.77% (3.25s)
+#56 Accuracy: 76.01% (3.29s)
+#57 Accuracy: 75.13% (3.25s)
+#58 Accuracy: 75.49% (3.24s)
+#59 Accuracy: 75.70% (3.21s)
+#60 Accuracy: 75.58% (3.22s)
+#61 Accuracy: 76.68% (3.22s)
+#62 Accuracy: 75.77% (3.21s)
+#63 Accuracy: 75.84% (3.19s)
+#64 Accuracy: 75.87% (3.21s)
+#65 Accuracy: 76.14% (3.21s)
+#66 Accuracy: 74.76% (3.21s)
+#67 Accuracy: 75.51% (3.22s)
+#68 Accuracy: 76.34% (3.21s)
+#69 Accuracy: 74.87% (3.20s)
+#70 Accuracy: 75.54% (3.20s)
+#71 Accuracy: 75.87% (3.21s)
+#72 Accuracy: 76.29% (3.20s)
+#73 Accuracy: 75.42% (3.20s)
+#74 Accuracy: 73.90% (3.16s)
+#75 Accuracy: 73.36% (3.18s)
+#76 Accuracy: 75.40% (3.18s)
+#77 Accuracy: 75.25% (3.19s)
+#78 Accuracy: 76.07% (3.18s)
+#79 Accuracy: 74.48% (3.16s)
+#80 Accuracy: 74.92% (3.18s)
+#81 Accuracy: 74.95% (3.18s)
+#82 Accuracy: 75.40% (3.16s)
+#83 Accuracy: 75.95% (3.17s)
+#84 Accuracy: 73.90% (3.15s)
+#85 Accuracy: 75.90% (3.16s)
+#86 Accuracy: 74.61% (3.23s)
+#87 Accuracy: 74.44% (3.45s)
+#88 Accuracy: 74.22% (3.51s)
+#89 Accuracy: 74.59% (4.27s)
+#90 Accuracy: 72.10% (4.09s)
+#91 Accuracy: 73.44% (3.97s)
+#92 Accuracy: 73.14% (4.01s)
+#93 Accuracy: 74.50% (3.99s)
+#94 Accuracy: 74.65% (4.19s)
+#95 Accuracy: 73.38% (3.91s)
+#96 Accuracy: 73.38% (3.95s)
+#97 Accuracy: 73.27% (4.14s)
+#98 Accuracy: 73.71% (3.94s)
+#99 Accuracy: 75.59% (3.90s)
+#100 Accuracy: 74.07% (3.90s)
+Mean Accuracy: 74.06808015419864 
+
+Finished running..
+Shutting down.
+
+Process finished with exit code 0
+
