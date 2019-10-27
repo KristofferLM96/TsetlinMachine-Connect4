@@ -111,10 +111,27 @@ def binary_generator(original_file):
                 binary_file_draw.write("\n")
 
 
-
 # Function to evenly distribute the data for train/test.
-def even_distribution(file_with_draw, file):
-
+def even_distribution(file_with_draw):
+    for line in file_with_draw:
+        line_data = line.split(",")
+        if line_data[83] == 2:  # win/loss/draw status is at place 84(index 83).
+            data_draw.append(line_data)
+        elif line_data[83] == 1:
+            data_win.append(line_data)
+        elif line_data[83] == 0:
+            data_loss.append(line_data)
+    amount_win_train = len(data_win) * ratio
+    amount_loss_train = len(data_loss) * ratio
+    amount_draw_train = len(data_draw) * ratio
+    i = 1
+    for value in data_binary:
+        if i < len(data_binary):
+            even_train.write(str(value) + ",")
+        else:
+            even_train.write(str(value))
+        i += 1
+    even_train.write("\n")
 
 
 # Function for creating k-fold dataset.
@@ -122,13 +139,7 @@ def k_fold_dataset_generator():
 
 
 
-# Function for displaying information about the various dataset lists:
-def display_information():
-
-
-
 # ***************************************************************************************
 # ************************************** MAIN *******************************************
 # ***************************************************************************************
 binary_generator(file)
-even_distribution(binary_file_draw, binary_file)
