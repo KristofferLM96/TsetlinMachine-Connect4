@@ -4,16 +4,16 @@ from time import time
 
 # Parameters
 epochs = 100
-clauses = 10000
-T = 80
-s = 27
+clauses = 10000  # 11502
+T = 80  # 30
+s = 27  # 58.98
 
 shape_x = 7
 shape_y = 6
 shape_z = 2
 
-frame_x = 2
-frame_y = 3
+frame_x = 6
+frame_y = 5
 
 print("epochs = ", epochs)
 print("clauses = ", clauses)
@@ -26,12 +26,12 @@ print("frame_x = ", frame_x)
 print("frame_y = ", frame_y, "\n")
 
 print("Loading training data..")
-train_data = np.loadtxt("Data/trainingdata.txt", delimiter=",")
+train_data = np.loadtxt("Data/eventrain.data", delimiter=",")
 X_train = train_data[:, 0:-1].reshape(train_data.shape[0], shape_x, shape_y, shape_z)
 Y_train = train_data[:, -1]
 
 print("Loading test data..")
-test_data = np.loadtxt("Data/testdata.txt", delimiter=",")
+test_data = np.loadtxt("Data/eventest.data", delimiter=",")
 X_test = test_data[:, 0:-1].reshape(test_data.shape[0], shape_x, shape_y, shape_z)
 Y_test = test_data[:, -1]
 
