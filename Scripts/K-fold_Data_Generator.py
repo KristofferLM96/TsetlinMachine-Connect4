@@ -89,7 +89,6 @@ def k_fold_dataset_generator():
 
 
 # Function for displaying information about the various dataset lists:
-# amount win/loss/draw etc.
 def display_information():
 
 
