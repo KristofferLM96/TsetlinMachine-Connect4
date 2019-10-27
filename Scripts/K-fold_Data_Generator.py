@@ -1,10 +1,13 @@
 file_path = "Data/original/connect-4.data"
 file = open(file_path)
-k_fold = 10
+k_fold = 10  # Amount of folds in k-fold distribution
 parts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-data_binary = []
-data_binary_draw = []
+data_binary = []  # Contains data in binary excluding draw
+data_binary_draw = []  # Contains all data in binary
 ratio = 0.9  # Distribution ratio ex. 0.9 => 90/10 split
+data_win = []  # Contains all win-data
+data_loss = []  # Contains all loss-data
+data_draw = []  # Contains all draw-data
 
 # ***************************************************************************************
 # *********************************** FUNCTIONS *****************************************
@@ -90,12 +93,6 @@ def k_fold_dataset_generator():
 
 # Function for displaying information about the various dataset lists:
 def display_information():
-
-
-
-# Function for creating files from the various dataset lists.
-def create_files():
-
 
 
 
