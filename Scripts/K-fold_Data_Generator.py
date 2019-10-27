@@ -1,5 +1,18 @@
 file_path = "Data/original/connect-4.data"
 file = open(file_path)
+
+binary_file_path = "Data/new/binary.data"
+binary_file = open(binary_file_path)
+
+binary_file_draw_path = "Data/new/binary_draw.data"
+binary_file_draw = open(binary_file_draw_path)
+
+even_train_path = "Data/new/even_train.data"
+even_train = open(even_train_path)
+
+even_test_path = "Data/new/even_test.data"
+even_test = open(even_test_path)
+
 k_fold = 10  # Amount of folds in k-fold distribution
 parts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 data_binary = []  # Contains data in binary excluding draw
@@ -49,6 +62,15 @@ def binary_generator(original_file):
                         data_binary.append(1)
                     elif "l" in l1:
                         data_binary.append(0)
+                # Create file for binary dataset.
+                m1 = 1
+                for m in data_binary:
+                    if m1 < len(data_binary):
+                        binary_file.write(str(m) + ",")
+                    else:
+                        binary_file.write(str(m))
+                    m1 += 1
+                binary_file.write("\n")
 
             else:
                 # Checks the list for the positions player x has played.
@@ -78,11 +100,20 @@ def binary_generator(original_file):
                         data_binary_draw.append(1)
                     elif "l" in l2:
                         data_binary_draw.append(0)
+                # Create file for binary dataset including draw.
+                m2 = 1
+                for m in data_binary_draw:
+                    if m2 < len(data_binary_draw):
+                        binary_file_draw.write(str(m) + ",")
+                    else:
+                        binary_file_draw.write(str(m))
+                    m2 += 1
+                binary_file_draw.write("\n")
 
 
 
 # Function to evenly distribute the data for train/test.
-def even_distribution():
+def even_distribution(file_with_draw, file):
 
 
 
@@ -100,3 +131,4 @@ def display_information():
 # ************************************** MAIN *******************************************
 # ***************************************************************************************
 binary_generator(file)
+even_distribution(binary_file_draw, binary_file)
