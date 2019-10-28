@@ -56,7 +56,7 @@ def KDataHandler(inputrawdata,testnumber,var1,var2,var3,epochs,kdatahighscore):
     X_test = testdata[:, 0:-1]
     Y_test = testdata[:, -1]
     
-    return (smartTsetlin(1700,6,39.27,50,kdatahighscore,X_train,Y_train,X_test,Y_test))
+    return (smartTsetlin(var1,var2,var3,epochs,kdatahighscore,X_train,Y_train,X_test,Y_test))
     
 
     
