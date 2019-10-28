@@ -226,7 +226,7 @@ def even_distribution(file_with_draw):
 
 
 # Function for creating k-fold dataset.
-def k_fold_dataset_generator():
+# def k_fold_dataset_generator():
 
 
 
@@ -234,6 +234,7 @@ def k_fold_dataset_generator():
 # ************************************** MAIN *******************************************
 # ***************************************************************************************
 binary_generator(file)
+even_distribution(binary_file_draw)
 
 file.close()
 binary_file.close()
