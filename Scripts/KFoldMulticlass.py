@@ -10,7 +10,6 @@ highscore = 0
 
 
 def smartTsetlin(var1, var2, var3, somepochs, thishighscore, X_train, Y_train, X_test, Y_test):
-    print("smartTsetlin!")
     tm = MultiClassTsetlinMachine(var1, var2, var3, boost_true_positive_feedback=0)
 
     tm.fit(X_train, Y_train, epochs=somepochs)
@@ -36,10 +35,9 @@ def smartTsetlin(var1, var2, var3, somepochs, thishighscore, X_train, Y_train, X
 
 
 def KDataHandler(inputrawdata,testnumber,var1,var2,var3,epochs,kdatahighscore):
-    print("KDataHandler!")
-    print("Length of rawdata ", len(inputrawdata))
     rawdata = inputrawdata.copy()
     testdata = rawdata[testnumber]
+
     del rawdata[testnumber]
     traindata = rawdata[0]
     del rawdata[0]
@@ -60,26 +58,18 @@ def KDataHandler(inputrawdata,testnumber,var1,var2,var3,epochs,kdatahighscore):
     
     return (smartTsetlin(1700,6,39.27,50,kdatahighscore,X_train,Y_train,X_test,Y_test))
     
-    
 
     
 def KFold(basepath,fileamount,var1,var2,var3,epochs,KFhighscore):
-    print("KFold!")
-    fileamount = fileamount - 1
     rawfulldata = []
     for i in range(fileamount):
         fname = str(i) + basepath
         thisdata = np.loadtxt(fname, delimiter=",")
         rawfulldata.append(thisdata)
 
-    
-
     results = []
     for i in range(fileamount):
-        print("For loop ", i)
-        print("Length of rawfulldata ", len(rawfulldata))
         score, newhighscore = KDataHandler(rawfulldata,i,var1,var2,var3,epochs,KFhighscore)
-        print("Length of rawfulldata ", len(rawfulldata))
         results.append(score)
         if newhighscore > KFhighscore:
             KFhighscore = newhighscore
