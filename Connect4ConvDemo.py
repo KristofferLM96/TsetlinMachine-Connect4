@@ -35,11 +35,11 @@ path_train = "Data/eventrain.data"
 path_test = "Data/eventest.data"
 
 
+# shape[0] = length of dataset.
+# shape[1] | shape_x = length of x-axis
+# shape[2] | shape_y = length of y-axis
+# shape[3] | shape_z = length of z-axis(if 3D)
 def loading_data(_path_train, _path_test):
-    # shape[0] = length of dataset.
-    # shape[1] | shape_x = length of x-axis
-    # shape[2] | shape_y = length of y-axis
-    # shape[3] | shape_z = length of z-axis(if 3D)
     print("Loading training data..")
     train_data = np.loadtxt(_path_train, delimiter=",")
     print("..using train dataset: ", _path_train)
