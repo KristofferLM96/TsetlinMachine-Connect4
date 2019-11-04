@@ -26,10 +26,10 @@ frame_y = 5
 print("frame_x = ", frame_x)
 print("frame_y = ", frame_y, "\n")
 
-X_train = np.array([]).reshape(0, 0, 0, 0)
-Y_train = np.array([]).reshape(0, 0, 0, 0)
-X_test = np.array([]).reshape(0, 0, 0, 0)
-Y_test = np.array([]).reshape(0, 0, 0, 0)
+X_train = np.array([])
+Y_train = np.array([])
+X_test = np.array([])
+Y_test = np.array([])
 
 path_train = "Data/eventrain.data"
 path_test = "Data/eventest.data"
