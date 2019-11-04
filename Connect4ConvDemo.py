@@ -5,7 +5,7 @@ from time import time
 # Parameters
 epochs = 100
 clauses = 10000  # 11502
-T = 90  # 30
+T = 80  # 30
 s = 27  # 58.98
 print("epochs = ", epochs)
 print("clauses = ", clauses)
@@ -26,29 +26,41 @@ frame_y = 5
 print("frame_x = ", frame_x)
 print("frame_y = ", frame_y, "\n")
 
-X_train = []
-Y_train = []
-X_test = []
-Y_test = []
+X_train = np.array([]).reshape(0, 0, 0, 0)
+Y_train = np.array([]).reshape(0, 0, 0, 0)
+X_test = np.array([]).reshape(0, 0, 0, 0)
+Y_test = np.array([]).reshape(0, 0, 0, 0)
 
 path_train = "Data/eventrain.data"
 path_test = "Data/eventest.data"
 
 
-def loading_data(_path_train, _path_test, _X_train, _Y_train, _X_test, _Y_test):
+def loading_data(_path_train, _path_test):
     # shape[0] = length of dataset.
     # shape[1] | shape_x = length of x-axis
     # shape[2] | shape_y = length of y-axis
     # shape[3] | shape_z = length of z-axis(if 3D)
     print("Loading training data..")
     train_data = np.loadtxt(_path_train, delimiter=",")
-    _X_train = train_data[:, 0:-1].reshape(train_data.shape[0], shape_x, shape_y, shape_z)
-    _Y_train = train_data[:, -1]
+    global X_train
+    global Y_train
+    X_train = train_data[:, 0:-1].reshape(train_data.shape[0], shape_x, shape_y, shape_z)
+    Y_train = train_data[:, -1]
+    print("X_train.shape[0]: ", X_train.shape[0])
+    print("X_train.shape[1]: ", X_train.shape[1])
+    print("X_train.shape[2]: ", X_train.shape[2])
+    print("X_train.shape[3]: ", X_train.shape[3], "\n")
 
     print("Loading test data..")
     test_data = np.loadtxt(_path_test, delimiter=",")
-    _X_test = test_data[:, 0:-1].reshape(test_data.shape[0], shape_x, shape_y, shape_z)
-    _Y_test = test_data[:, -1]
+    global X_test
+    global Y_test
+    X_test = test_data[:, 0:-1].reshape(test_data.shape[0], shape_x, shape_y, shape_z)
+    Y_test = test_data[:, -1]
+    print("X_test.shape[0]: ", X_test.shape[0])
+    print("X_test.shape[1]: ", X_test.shape[1])
+    print("X_test.shape[2]: ", X_test.shape[2])
+    print("X_test.shape[3]: ", X_test.shape[3], "\n")
 
 
 def ConvTM(_clauses, _T, _s, _epochs, _frame_x, _frame_y):
@@ -68,5 +80,5 @@ def ConvTM(_clauses, _T, _s, _epochs, _frame_x, _frame_y):
     print("Shutting down.")
 
 
-loading_data(path_train, path_test, X_train, Y_train, X_test, Y_test)
+loading_data(path_train, path_test)
 ConvTM(clauses, T, s, epochs, frame_x, frame_y)
