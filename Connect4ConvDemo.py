@@ -35,17 +35,22 @@ test_data = np.loadtxt("Data/eventest.data", delimiter=",")
 X_test = test_data[:, 0:-1].reshape(test_data.shape[0], shape_x, shape_y, shape_z)
 Y_test = test_data[:, -1]
 
-print("Creating MultiClass Convolutional Tsetlin Machine.")
-tm = MultiClassConvolutionalTsetlinMachine2D(clauses, T, s, (frame_x, frame_y))
-print("Starting ConvTM..")
-print("\nAccuracy over " + str(epochs) + " epochs:\n")
-for i in range(epochs):
-    start = time()
-    tm.fit(X_train, Y_train, epochs=1, incremental=True)
-    stop = time()
-    result = 100 * (tm.predict(X_test) == Y_test).mean()
-    print("#%d Accuracy: %.2f%% (%.2fs)" % (i + 1, result, stop - start))
 
-print("Mean Accuracy:", 100*(tm.predict(X_test) == Y_test).mean(), "\n")
-print("Finished running..")
-print("Shutting down.")
+def ConvTM(_clauses, _T, _s, _epochs, _frame_x, _frame_y):
+    print("Creating MultiClass Convolutional Tsetlin Machine.")
+    tm = MultiClassConvolutionalTsetlinMachine2D(_clauses, _T, _s, (_frame_x, _frame_y))
+    print("Starting ConvTM..")
+    print("\nAccuracy over " + str(_epochs) + " epochs:\n")
+    for i in range(_epochs):
+        start = time()
+        tm.fit(X_train, Y_train, epochs=1, incremental=True)
+        stop = time()
+        result = 100 * (tm.predict(X_test) == Y_test).mean()
+        print("#%d Accuracy: %.2f%% (%.2fs)" % (i + 1, result, stop - start))
+
+    print("Mean Accuracy:", 100*(tm.predict(X_test) == Y_test).mean(), "\n")
+    print("Finished running..")
+    print("Shutting down.")
+
+
+ConvTM(clauses, T, s, epochs, frame_x, frame_y)
