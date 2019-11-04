@@ -42,6 +42,7 @@ def loading_data(_path_train, _path_test):
     # shape[3] | shape_z = length of z-axis(if 3D)
     print("Loading training data..")
     train_data = np.loadtxt(_path_train, delimiter=",")
+    print("..using train dataset: ", _path_train)
     global X_train
     global Y_train
     X_train = train_data[:, 0:-1].reshape(train_data.shape[0], shape_x, shape_y, shape_z)
@@ -53,6 +54,7 @@ def loading_data(_path_train, _path_test):
 
     print("Loading test data..")
     test_data = np.loadtxt(_path_test, delimiter=",")
+    print("..using test dataset: ", _path_test)
     global X_test
     global Y_test
     X_test = test_data[:, 0:-1].reshape(test_data.shape[0], shape_x, shape_y, shape_z)
