@@ -1,0 +1,8 @@
+var1: 1180 var2: 56 var3: 853 epochs: 50 accuracy: 41.7771232204
+var1: 805 var2: 381 var3: 71 epochs: 50 accuracy: 61.724758632
+var1: 1650 var2: 74 var3: 103 epochs: 50 accuracy: 63.1811487482
+var1: 820 var2: 6 var3: 223 epochs: 50 accuracy: 68.8921616757
+var1: 937 var2: 872 var3: 30 epochs: 50 accuracy: 70.5449189985
+var1: 1581 var2: 802 var3: 21 epochs: 50 accuracy: 70.9867452135
+var1: 1581 var2: 329 var3: 21 epochs: 50 accuracy: 74.9140893471
+var1: 11991 var2: 38 var3: 75 epochs: 50 accuracy: 78.3832433317
