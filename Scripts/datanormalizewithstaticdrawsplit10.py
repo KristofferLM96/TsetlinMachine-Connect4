@@ -132,21 +132,47 @@ with open(filepath) as fp:
     #Store data to file
     for a in range(len(traintestdatas)):
         stringnumber = str(a)
-        filename = stringnumber + "verybigbindata.data"
-        thefile = open(filename,'w')
+        filename = stringnumber + "teststatickfold.data"
+        testfile = open(filename,'w')
 
         for r in range(len(traintestdatas[a])):
             t = 0
             for item in traintestdatas[a][r]:
                 if t < len(traintestdatas[a][r])-1:
-                    thefile.write("%s" % item)
-                    thefile.write(",")
+                    testfile.write("%s" % item)
+                    testfile.write(",")
                 else:
-                    thefile.write("%s" % item)
+                    testfile.write("%s" % item)
                 t += 1
-            thefile.write("\n")
-        thefile.close()
-    #trnd = open('xeventrain.data', 'w')
+            testfile.write("\n")
+        testfile.close()
+
+
+        filename = stringnumber + "trainstatickfold.data"
+        trainfile = open(filename,'w')
+        thistrain = []
+        for q in range(len(traintestdatas)):
+            if q != a:
+                for t in range(len(traintestdatas[q])):
+                    thistrain.append(traintestdatas[q][t])
+
+        random.shuffle(thistrain)
+
+        for r in range(len(thistrain)):
+            t = 0
+            for item in thistrain[r]:
+                if t < len(thistrain[r])-1:
+                    trainfile.write("%s" % item)
+                    trainfile.write(",")
+                else:
+                    trainfile.write("%s" % item)
+                t += 1
+            trainfile.write("\n")
+
+
+        print(len(thistrain))
+        trainfile.close()
+
 
 fp.close()
 
