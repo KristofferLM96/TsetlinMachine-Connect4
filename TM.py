@@ -3,11 +3,11 @@ import numpy as np
 from time import time
 
 # Parameters
-split_ratio = 0.9
-epochs = 100
-clauses = 10000  # 11502
-T = 80  # 30
-s = 27  # 58.98
+# split_ratio = 0.9
+epochs = 50
+clauses = 10000
+T = 88
+s = 27
 k_fold_amount = 10
 
 print("epochs = ", epochs)
@@ -20,7 +20,7 @@ Y_train = np.array([])
 X_test = np.array([])
 Y_test = np.array([])
 
-base_path = "statickfold.data"
+base_path = "statickfoldcorrected.data"
 # path_train = "Data/eventrain.data"
 # path_test = "Data/eventest.data"
 
@@ -28,8 +28,8 @@ base_path = "statickfold.data"
 def merging_k_fold(file_amount, _clauses, _T, _s, _epochs):
     results = []
     for i in range(file_amount):
-        train_string = "Data/" + str(i) + "train" + base_path
-        test_string = "Data/" + str(i) + "test" + base_path
+        train_string = "Data/KfoldDataStaticTransformed/" + str(i) + "train" + base_path
+        test_string = "Data/KfoldDataStaticTransformed/" + str(i) + "test" + base_path
         score = loading_data(train_string, test_string, _clauses, _T, _s, _epochs)
         results.append(score)
 
