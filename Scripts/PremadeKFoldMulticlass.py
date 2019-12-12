@@ -43,8 +43,8 @@ def KDataHandler(train, test, testnumber, var1, var2, var3, epochs, kdatahighsco
 def KFold(basepath, fileamount, var1, var2, var3, epochs, KFhighscore):
     results = []
     for i in range(fileamount):
-        trainstring = str(i) + "train" + basepath
-        teststring = str(i) + "test" + basepath
+        trainstring = "../Data/" + str(i) + "train" + basepath
+        teststring = "../Data/" + str(i) + "test" + basepath
         score, newhighscore = KDataHandler(trainstring, teststring, i, var1, var2, var3, epochs, KFhighscore)
         results.append(score)
         if newhighscore > KFhighscore:
