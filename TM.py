@@ -20,7 +20,8 @@ Y_train = np.array([])
 X_test = np.array([])
 Y_test = np.array([])
 
-base_path = "statickfoldcorrected.data"
+base_path_start = "Data/KfoldDataStaticTransformed/"
+base_path_end = "statickfoldcorrected.data"
 # path_train = "Data/eventrain.data"
 # path_test = "Data/eventest.data"
 
@@ -28,8 +29,8 @@ base_path = "statickfoldcorrected.data"
 def merging_k_fold(file_amount, _clauses, _T, _s, _epochs):
     results = []
     for i in range(file_amount):
-        train_string = "Data/KfoldDataStaticTransformed/" + str(i) + "train" + base_path
-        test_string = "Data/KfoldDataStaticTransformed/" + str(i) + "test" + base_path
+        train_string = base_path_start + str(i) + "train" + base_path_end
+        test_string = base_path_start + str(i) + "test" + base_path_end
         score = loading_data(train_string, test_string, _clauses, _T, _s, _epochs)
         results.append(score)
 
