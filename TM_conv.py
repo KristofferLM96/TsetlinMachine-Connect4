@@ -3,10 +3,11 @@ import numpy as np
 from time import time
 
 # Parameters
-epochs = 100
+epochs = 50
 clauses = 10000  # 11502
 T = 80  # 30
 s = 27  # 58.98
+k_fold_amount = 10
 print("epochs = ", epochs)
 print("clauses = ", clauses)
 print("T = ", T)
@@ -21,8 +22,8 @@ print("shape_y = ", shape_y)
 print("shape_z = ", shape_z, "\n")
 
 # Shape of the window for ConvTM moving around in the game board
-frame_x = 6
-frame_y = 5
+frame_x = 4
+frame_y = 4
 print("frame_x = ", frame_x)
 print("frame_y = ", frame_y, "\n")
 
@@ -31,18 +32,30 @@ Y_train = np.array([])
 X_test = np.array([])
 Y_test = np.array([])
 
-path_train = "Data/eventrain.data"
-path_test = "Data/eventest.data"
+base_path_start = "Data/KfoldDataStaticTransformed/"
+base_path_end = "statickfoldcorrected.data"
+# path_train = "Data/eventrain.data"
+# path_test = "Data/eventest.data"
+
+
+def merging_k_fold(file_amount, _clauses, _T, _s, _epochs, _frame_x, _frame_y):
+    results = []
+    for i in range(file_amount):
+        train_string = base_path_start + str(i) + "train" + base_path_end
+        test_string = base_path_start + str(i) + "test" + base_path_end
+        score = loading_data(train_string, test_string, _clauses, _T, _s, epochs, _frame_x, _frame_y)
+        results.append(score)
+
+    return results
 
 
 # shape[0] = length of dataset.
 # shape[1] | shape_x = length of x-axis
 # shape[2] | shape_y = length of y-axis
 # shape[3] | shape_z = length of z-axis(if 3D)
-def loading_data(_path_train, _path_test):
+def loading_data(_train, _test, _clauses, _T, _s, _epochs, _frame_x, _frame_y):
     print("Loading training data..")
-    train_data = np.loadtxt(_path_train, delimiter=",")
-    print("..using train dataset: ", _path_train)
+    train_data = np.loadtxt(_train, delimiter=",")
     global X_train
     global Y_train
     X_train = train_data[:, 0:-1].reshape(train_data.shape[0], shape_x, shape_y, shape_z)
@@ -53,8 +66,7 @@ def loading_data(_path_train, _path_test):
     print("X_train.shape[3]: ", X_train.shape[3], "\n")
 
     print("Loading test data..")
-    test_data = np.loadtxt(_path_test, delimiter=",")
-    print("..using test dataset: ", _path_test)
+    test_data = np.loadtxt(_test, delimiter=",")
     global X_test
     global Y_test
     X_test = test_data[:, 0:-1].reshape(test_data.shape[0], shape_x, shape_y, shape_z)
@@ -64,10 +76,12 @@ def loading_data(_path_train, _path_test):
     print("X_test.shape[2]: ", X_test.shape[2])
     print("X_test.shape[3]: ", X_test.shape[3], "\n")
 
+    return ConvTM(_clauses, _T, _s, _epochs, _frame_x, _frame_y)
+
 
 def ConvTM(_clauses, _T, _s, _epochs, _frame_x, _frame_y):
     print("Creating MultiClass Convolutional Tsetlin Machine.")
-    tm = MultiClassConvolutionalTsetlinMachine2D(_clauses, _T, _s, (_frame_x, _frame_y))
+    tm = MultiClassConvolutionalTsetlinMachine2D(_clauses, _T, _s, (_frame_x, _frame_y), boost_true_positive_feedback=0)
     print("Starting ConvTM..")
     print("\nAccuracy over " + str(_epochs) + " epochs:\n")
     for i in range(_epochs):
@@ -77,10 +91,12 @@ def ConvTM(_clauses, _T, _s, _epochs, _frame_x, _frame_y):
         result = 100 * (tm.predict(X_test) == Y_test).mean()
         print("#%d Accuracy: %.2f%% (%.2fs)" % (i + 1, result, stop - start))
 
-    print("Mean Accuracy:", 100*(tm.predict(X_test) == Y_test).mean(), "\n")
+    mean_accuracy = 100 * (tm.predict(X_test) == Y_test).mean()
+    print("Mean Accuracy:", mean_accuracy, "\n")
     print("Finished running..")
-    print("Shutting down.")
+
+    return mean_accuracy
 
 
-loading_data(path_train, path_test)
-ConvTM(clauses, T, s, epochs, frame_x, frame_y)
+score = merging_k_fold(k_fold_amount, clauses, T, s, epochs, frame_x, frame_y)
+print(score)
