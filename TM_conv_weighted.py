@@ -4,9 +4,9 @@ from time import time
 
 # Parameters
 epochs = 50
-clauses = 10000  # 11502
-T = 80  # 30
-s = 27  # 58.98
+clauses = 4000
+T = 8800
+s = 27
 k_fold_amount = 10
 print("epochs = ", epochs)
 print("clauses = ", clauses)
@@ -94,7 +94,7 @@ def ConvTM(_clauses, _T, _s, _epochs, _frame_x, _frame_y):
 
     mean_accuracy = 100 * (tm.predict(X_test) == Y_test).mean()
     print("Mean Accuracy:", mean_accuracy, "\n")
-    print("Finished running..")
+    print("Finished running.. \n")
 
     return mean_accuracy
 
