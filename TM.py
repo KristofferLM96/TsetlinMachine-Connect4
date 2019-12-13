@@ -54,7 +54,7 @@ def loading_data(_train, _test, _clauses, _T, _s, _epochs):
     X_test = test_data[:, 0:-1]
     Y_test = test_data[:, -1]
 
-    return TM(_clauses, _T, _s, epochs)
+    return TM(_clauses, _T, _s, _epochs)
 
 
 def TM(_clauses, _T, _s, _epochs):
@@ -69,9 +69,11 @@ def TM(_clauses, _T, _s, _epochs):
         result = 100 * (tm.predict(X_test) == Y_test).mean()
         print("#%d Accuracy: %.2f%% (%.2fs)" % (i + 1, result, stop - start))
 
-    print("Mean Accuracy:", 100 * (tm.predict(X_test) == Y_test).mean())
-    print("Finished running..")
-    print("Shutting down.")
+    mean_accuracy = 100 * (tm.predict(X_test) == Y_test).mean()
+    print("Mean Accuracy:", mean_accuracy)
+    print("Finished running.. \n")
+
+    return mean_accuracy
 
 
 score = merging_k_fold(k_fold_amount, clauses, T, s, epochs)
