@@ -4,9 +4,9 @@ from time import time
 
 # Parameters
 epochs = 50
-clauses = 10000  # 11502
-T = 80  # 30
-s = 27  # 58.98
+clauses = 10000
+T = 88
+s = 27
 k_fold_amount = 10
 print("epochs = ", epochs)
 print("clauses = ", clauses)

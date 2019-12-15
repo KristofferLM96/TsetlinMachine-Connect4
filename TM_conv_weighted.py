@@ -4,7 +4,7 @@ from time import time
 
 # Parameters
 epochs = 50
-clauses = 4000
+clauses = 1000
 T = 8800
 s = 27
 k_fold_amount = 10
@@ -22,8 +22,8 @@ print("shape_y = ", shape_y)
 print("shape_z = ", shape_z, "\n")
 
 # Shape of the window for ConvTM moving around in the game board
-frame_x = 4
-frame_y = 4
+frame_x = 5
+frame_y = 5
 print("frame_x = ", frame_x)
 print("frame_y = ", frame_y, "\n")
 
