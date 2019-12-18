@@ -1,8 +1,4 @@
-from pyTsetlinMachine.tm import MultiClassTsetlinMachine
 import numpy as np
-from time import time
-from sklearn.metrics import classification_report
-from sklearn.metrics import accuracy_score
 from sklearn.naive_bayes import GaussianNB
 from sklearn.naive_bayes import BernoulliNB
 from sklearn.naive_bayes import MultinomialNB
@@ -14,9 +10,6 @@ from sklearn.tree import DecisionTreeClassifier
 
 # Parameters
 epochs = 50
-clauses = 4000
-T = 8800
-s = 27
 k_fold_amount = 10
 
 X_train = np.array([])
@@ -27,22 +20,22 @@ Y_test = np.array([])
 base_path_start = "Data/KfoldDataStaticTransformed/"
 base_path_end = "statickfoldcorrected.data"
 
-results = []
+acc_results = []
 
 
-def merging_k_fold(file_amount, _clauses, _T, _s, _epochs):
+def merging_k_fold(file_amount, _epochs):
     results = []
     for i in range(file_amount):
         print("Running k-fold - ", i+1)
         train_string = base_path_start + str(i) + "train" + base_path_end
         test_string = base_path_start + str(i) + "test" + base_path_end
-        score = loading_data(train_string, test_string, _clauses, _T, _s, _epochs)
+        score = loading_data(train_string, test_string, _epochs)
         results.append(score)
 
     return results
 
 
-def loading_data(_train, _test, _clauses, _T, _s, _epochs):
+def loading_data(_train, _test, _epochs):
     train_data = np.loadtxt(_train, delimiter=",")
     global X_train
     global Y_train
@@ -55,85 +48,98 @@ def loading_data(_train, _test, _clauses, _T, _s, _epochs):
     X_test = test_data[:, 0:-1]
     Y_test = test_data[:, -1]
 
-    return app(_epochs)
+    return bnb(_epochs)
 
 
-def app(_epochs):
-    SVC_model = svm.SVC()
-    """
-    print("\nAccuracy over ", _epochs, " epochs:\n")
-    for i in range(_epochs):
-        start = time()
-        SVC_model.fit(X_train, Y_train)
-        stop = time()
-        result = 100 * (SVC_model.predict(X_test) == Y_test).mean()
-        print("#%d Accuracy: %.2f%% (%.2fs)" % (i + 1, result, stop - start))
-    """
-    SVC_model.fit(X_train, Y_train)
-    result = 100 * (SVC_model.predict(X_test) == Y_test).mean()
-    print("Accuracy:", result, "\n")
-    global results
-    results.append(result)
-
-    """
-    print("SVM: ")
+def svm(_epochs):
+    # Support Vector Machines
     SVC_model = svm.SVC()
     SVC_model.fit(X_train, Y_train)
-    SVC_prediction = SVC_model.predict(X_test)
-    print(accuracy_score(SVC_prediction, Y_test)*100)
-    print(classification_report(SVC_prediction, Y_test), "\n")
+    acc_result = 100 * (SVC_model.predict(X_test) == Y_test).mean()
+    print("Accuracy:", acc_result, "\n")
+    global acc_results
+    acc_results.append(acc_result)
 
-    print("Logistic Regression: ")
+    return acc_result
+
+
+def log_reg(_epochs):
+    # Logistic Regression
     logreg_clf = LogisticRegression()
     logreg_clf.fit(X_train, Y_train)
-    logreg_prediction = logreg_clf.predict(X_test)
-    print(accuracy_score(logreg_prediction, Y_test) * 100)
-    print(classification_report(logreg_prediction, Y_test), "\n")
+    acc_result = 100 * (logreg_clf.predict(X_test) == Y_test).mean()
+    print("Accuracy:", acc_result, "\n")
+    global acc_results
+    acc_results.append(acc_result)
 
-    print("Decision Tree Classifier: ")
+    return acc_result
+
+
+def dtc(_epochs):
+    # Decision Tree Classifier
     DTC_model = DecisionTreeClassifier()
     DTC_model.fit(X_train, Y_train)
-    DTC_prediction = DTC_model.predict(X_test)
-    print(accuracy_score(DTC_prediction, Y_test) * 100)
-    print(classification_report(DTC_prediction, Y_test), "\n")
+    acc_result = 100 * (DTC_model.predict(X_test) == Y_test).mean()
+    print("Accuracy:", acc_result, "\n")
+    global acc_results
+    acc_results.append(acc_result)
 
-    print("Gaussian Naive_Bayes: ")
-    G_NB = GaussianNB()
-    G_NB.fit(X_train, Y_train)
-    G_NB_prediction = G_NB.predict(X_test)
-    print(accuracy_score(G_NB_prediction, Y_test) * 100)
-    print(classification_report(G_NB_prediction, Y_test), "\n")
+    return acc_result
 
-    print("Multinomial Naive_Bayes: ")
-    M_NB = GaussianNB()
-    M_NB.fit(X_train, Y_train)
-    M_NB_prediction = M_NB.predict(X_test)
-    print(accuracy_score(M_NB_prediction, Y_test) * 100)
-    print(classification_report(M_NB_prediction, Y_test), "\n")
 
-    print("BernoulliNB Naive_Bayes: ")
-    B_NB = GaussianNB()
-    B_NB.fit(X_train, Y_train)
-    B_NB_prediction = B_NB.predict(X_test)
-    print(accuracy_score(B_NB_prediction, Y_test) * 100)
-    print(classification_report(B_NB_prediction, Y_test), "\n")
-
-    print("Stochastic Gradient Descent: ")
+def sgd(_epochs):
+    # Stochastic Gradient Descent
     SGD = SGDClassifier()
     SGD.fit(X_train, Y_train)
-    SGD_prediction = SGD.predict(X_test)
-    print(accuracy_score(SGD_prediction, Y_test) * 100)
-    print(classification_report(SGD_prediction, Y_test), "\n")
-    """
+    acc_result = 100 * (SGD.predict(X_test) == Y_test).mean()
+    print("Accuracy:", acc_result, "\n")
+    global acc_results
+    acc_results.append(acc_result)
 
-    return result
+    return acc_result
 
 
-score = merging_k_fold(k_fold_amount, clauses, T, s, epochs)
+def gnb(_epochs):
+    # Naive Bayes Gaussian
+    G_NB = GaussianNB()
+    G_NB.fit(X_train, Y_train)
+    acc_result = 100 * (G_NB.predict(X_test) == Y_test).mean()
+    print("Accuracy:", acc_result, "\n")
+    global acc_results
+    acc_results.append(acc_result)
+
+    return acc_result
+
+
+def mnb(_epochs):
+    # Naive Bayes Multinomial
+    M_NB = MultinomialNB()
+    M_NB.fit(X_train, Y_train)
+    acc_result = 100 * (M_NB.predict(X_test) == Y_test).mean()
+    print("Accuracy:", acc_result, "\n")
+    global acc_results
+    acc_results.append(acc_result)
+
+    return acc_result
+
+
+def bnb(_epochs):
+    # Naive Bayes Bernoulli
+    B_NB = BernoulliNB()
+    B_NB.fit(X_train, Y_train)
+    acc_result = 100 * (B_NB.predict(X_test) == Y_test).mean()
+    print("Accuracy:", acc_result, "\n")
+    global acc_results
+    acc_results.append(acc_result)
+
+    return acc_result
+
+
+score = merging_k_fold(k_fold_amount, epochs)
 print(score)
-result = 0
-for i in range(len(results)):
-    result = result + results[i]
+avg_result = 0
+for i in range(len(acc_results)):
+    avg_result = avg_result + acc_results[i]
 
-result = result / k_fold_amount
-print("Mean Accuracy for ", k_fold_amount, " k-folds: ", result, " %")
+avg_result = avg_result / k_fold_amount
+print("Mean Accuracy for ", k_fold_amount, " k-folds: ", avg_result, " %")
