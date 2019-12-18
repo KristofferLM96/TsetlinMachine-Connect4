@@ -1,0 +1,727 @@
+/usr/bin/python3.6 /home/kristoffer/Documents/IKT442_Workspace/Tsetlin-Machine-Connect4/TsetlinMachine-Connect4/TM_conv_weighted.py
+epochs =  50
+clauses =  2000
+T =  8800
+s =  27 
+
+shape_x =  7
+shape_y =  6
+shape_z =  2 
+
+frame_x =  5
+frame_y =  5 
+
+Loading training data..
+X_train.shape[0]:  60799
+X_train.shape[1]:  7
+X_train.shape[2]:  6
+X_train.shape[3]:  2 
+
+Loading test data..
+X_test.shape[0]:  6757
+X_test.shape[1]:  7
+X_test.shape[2]:  6
+X_test.shape[3]:  2 
+
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM with weighted clauses..
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 74.28% (15.18s)
+#2 Accuracy: 77.67% (14.14s)
+#3 Accuracy: 78.96% (13.43s)
+#4 Accuracy: 79.96% (13.61s)
+#5 Accuracy: 80.55% (12.84s)
+#6 Accuracy: 80.61% (12.39s)
+#7 Accuracy: 81.43% (12.13s)
+#8 Accuracy: 81.49% (11.90s)
+#9 Accuracy: 81.83% (11.79s)
+#10 Accuracy: 81.90% (11.74s)
+#11 Accuracy: 81.99% (11.83s)
+#12 Accuracy: 82.30% (11.99s)
+#13 Accuracy: 82.79% (11.61s)
+#14 Accuracy: 82.82% (11.50s)
+#15 Accuracy: 82.85% (11.42s)
+#16 Accuracy: 83.16% (11.40s)
+#17 Accuracy: 82.91% (11.41s)
+#18 Accuracy: 83.22% (11.35s)
+#19 Accuracy: 82.71% (11.27s)
+#20 Accuracy: 82.79% (11.21s)
+#21 Accuracy: 82.95% (11.17s)
+#22 Accuracy: 83.53% (11.15s)
+#23 Accuracy: 83.48% (11.11s)
+#24 Accuracy: 83.25% (11.06s)
+#25 Accuracy: 83.37% (11.05s)
+#26 Accuracy: 83.51% (11.07s)
+#27 Accuracy: 83.45% (11.03s)
+#28 Accuracy: 83.53% (10.95s)
+#29 Accuracy: 83.26% (10.91s)
+#30 Accuracy: 83.29% (10.91s)
+#31 Accuracy: 83.34% (10.88s)
+#32 Accuracy: 83.11% (10.87s)
+#33 Accuracy: 83.78% (10.90s)
+#34 Accuracy: 83.65% (10.87s)
+#35 Accuracy: 83.74% (10.89s)
+#36 Accuracy: 84.13% (10.82s)
+#37 Accuracy: 83.82% (10.78s)
+#38 Accuracy: 84.00% (10.84s)
+#39 Accuracy: 83.53% (10.83s)
+#40 Accuracy: 83.22% (10.83s)
+#41 Accuracy: 84.06% (10.73s)
+#42 Accuracy: 83.71% (10.76s)
+#43 Accuracy: 83.84% (10.72s)
+#44 Accuracy: 83.38% (10.64s)
+#45 Accuracy: 83.91% (10.65s)
+#46 Accuracy: 83.56% (10.67s)
+#47 Accuracy: 83.72% (10.64s)
+#48 Accuracy: 84.03% (10.66s)
+#49 Accuracy: 83.65% (10.65s)
+#50 Accuracy: 83.50% (10.60s)
+Mean Accuracy: 83.49859405061419 
+
+Finished running.. 
+
+Loading training data..
+X_train.shape[0]:  60799
+X_train.shape[1]:  7
+X_train.shape[2]:  6
+X_train.shape[3]:  2 
+
+Loading test data..
+X_test.shape[0]:  6757
+X_test.shape[1]:  7
+X_test.shape[2]:  6
+X_test.shape[3]:  2 
+
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM with weighted clauses..
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 73.88% (14.66s)
+#2 Accuracy: 77.11% (13.46s)
+#3 Accuracy: 78.75% (12.77s)
+#4 Accuracy: 80.08% (12.49s)
+#5 Accuracy: 80.66% (12.21s)
+#6 Accuracy: 81.43% (12.05s)
+#7 Accuracy: 81.65% (11.92s)
+#8 Accuracy: 81.93% (11.82s)
+#9 Accuracy: 81.80% (11.76s)
+#10 Accuracy: 82.00% (11.67s)
+#11 Accuracy: 82.76% (11.61s)
+#12 Accuracy: 82.49% (11.53s)
+#13 Accuracy: 82.66% (11.46s)
+#14 Accuracy: 82.70% (11.47s)
+#15 Accuracy: 82.60% (11.43s)
+#16 Accuracy: 82.98% (11.33s)
+#17 Accuracy: 83.23% (11.52s)
+#18 Accuracy: 83.05% (11.33s)
+#19 Accuracy: 83.25% (11.35s)
+#20 Accuracy: 83.28% (11.18s)
+#21 Accuracy: 82.97% (11.15s)
+#22 Accuracy: 83.56% (11.05s)
+#23 Accuracy: 84.02% (11.02s)
+#24 Accuracy: 83.59% (11.03s)
+#25 Accuracy: 83.93% (11.02s)
+#26 Accuracy: 83.50% (10.98s)
+#27 Accuracy: 83.75% (10.96s)
+#28 Accuracy: 83.76% (10.91s)
+#29 Accuracy: 83.97% (10.91s)
+#30 Accuracy: 83.74% (10.97s)
+#31 Accuracy: 83.79% (10.86s)
+#32 Accuracy: 83.81% (10.84s)
+#33 Accuracy: 83.88% (10.81s)
+#34 Accuracy: 83.78% (10.78s)
+#35 Accuracy: 83.94% (10.77s)
+#36 Accuracy: 83.91% (10.69s)
+#37 Accuracy: 84.00% (10.78s)
+#38 Accuracy: 83.10% (10.97s)
+#39 Accuracy: 84.36% (11.37s)
+#40 Accuracy: 83.88% (11.40s)
+#41 Accuracy: 83.81% (10.69s)
+#42 Accuracy: 83.59% (10.67s)
+#43 Accuracy: 83.48% (10.61s)
+#44 Accuracy: 83.65% (10.63s)
+#45 Accuracy: 83.76% (10.61s)
+#46 Accuracy: 83.48% (10.55s)
+#47 Accuracy: 84.25% (10.59s)
+#48 Accuracy: 83.56% (10.55s)
+#49 Accuracy: 84.11% (10.58s)
+#50 Accuracy: 83.54% (10.57s)
+Mean Accuracy: 83.54299245227172 
+
+Finished running.. 
+
+Loading training data..
+X_train.shape[0]:  60800
+X_train.shape[1]:  7
+X_train.shape[2]:  6
+X_train.shape[3]:  2 
+
+Loading test data..
+X_test.shape[0]:  6756
+X_test.shape[1]:  7
+X_test.shape[2]:  6
+X_test.shape[3]:  2 
+
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM with weighted clauses..
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 73.58% (14.69s)
+#2 Accuracy: 76.63% (13.36s)
+#3 Accuracy: 78.73% (12.81s)
+#4 Accuracy: 79.10% (12.52s)
+#5 Accuracy: 80.24% (12.28s)
+#6 Accuracy: 80.99% (12.14s)
+#7 Accuracy: 81.42% (12.01s)
+#8 Accuracy: 81.59% (11.90s)
+#9 Accuracy: 81.94% (11.83s)
+#10 Accuracy: 82.71% (11.75s)
+#11 Accuracy: 82.25% (11.68s)
+#12 Accuracy: 82.19% (11.59s)
+#13 Accuracy: 83.14% (11.52s)
+#14 Accuracy: 82.62% (11.48s)
+#15 Accuracy: 82.76% (11.45s)
+#16 Accuracy: 82.98% (11.37s)
+#17 Accuracy: 82.98% (11.33s)
+#18 Accuracy: 83.26% (11.31s)
+#19 Accuracy: 83.36% (11.25s)
+#20 Accuracy: 83.60% (11.21s)
+#21 Accuracy: 83.20% (11.21s)
+#22 Accuracy: 83.36% (11.09s)
+#23 Accuracy: 83.51% (11.08s)
+#24 Accuracy: 83.48% (11.07s)
+#25 Accuracy: 82.93% (11.07s)
+#26 Accuracy: 83.63% (11.03s)
+#27 Accuracy: 83.36% (11.02s)
+#28 Accuracy: 83.58% (10.97s)
+#29 Accuracy: 83.53% (10.93s)
+#30 Accuracy: 83.47% (10.93s)
+#31 Accuracy: 82.98% (10.91s)
+#32 Accuracy: 83.50% (10.91s)
+#33 Accuracy: 83.56% (10.89s)
+#34 Accuracy: 84.01% (10.83s)
+#35 Accuracy: 83.75% (10.83s)
+#36 Accuracy: 83.97% (10.80s)
+#37 Accuracy: 84.01% (10.78s)
+#38 Accuracy: 83.76% (10.74s)
+#39 Accuracy: 83.78% (10.73s)
+#40 Accuracy: 83.53% (10.71s)
+#41 Accuracy: 84.22% (10.72s)
+#42 Accuracy: 83.73% (10.73s)
+#43 Accuracy: 83.79% (10.62s)
+#44 Accuracy: 84.16% (10.61s)
+#45 Accuracy: 83.51% (10.61s)
+#46 Accuracy: 83.56% (10.69s)
+#47 Accuracy: 83.04% (11.07s)
+#48 Accuracy: 83.93% (10.85s)
+#49 Accuracy: 83.85% (12.08s)
+#50 Accuracy: 83.24% (11.49s)
+Mean Accuracy: 83.2445233866193 
+
+Finished running.. 
+
+Loading training data..
+X_train.shape[0]:  60800
+X_train.shape[1]:  7
+X_train.shape[2]:  6
+X_train.shape[3]:  2 
+
+Loading test data..
+X_test.shape[0]:  6756
+X_test.shape[1]:  7
+X_test.shape[2]:  6
+X_test.shape[3]:  2 
+
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM with weighted clauses..
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 73.90% (16.71s)
+#2 Accuracy: 77.86% (13.47s)
+#3 Accuracy: 79.87% (12.93s)
+#4 Accuracy: 80.49% (12.62s)
+#5 Accuracy: 80.95% (12.44s)
+#6 Accuracy: 81.56% (12.24s)
+#7 Accuracy: 81.69% (12.11s)
+#8 Accuracy: 82.19% (11.97s)
+#9 Accuracy: 82.46% (11.95s)
+#10 Accuracy: 82.74% (11.78s)
+#11 Accuracy: 83.26% (11.73s)
+#12 Accuracy: 83.36% (11.63s)
+#13 Accuracy: 83.35% (11.56s)
+#14 Accuracy: 83.53% (11.49s)
+#15 Accuracy: 83.66% (11.45s)
+#16 Accuracy: 83.85% (11.40s)
+#17 Accuracy: 83.66% (11.32s)
+#18 Accuracy: 83.97% (11.27s)
+#19 Accuracy: 83.60% (11.25s)
+#20 Accuracy: 83.93% (11.23s)
+#21 Accuracy: 83.85% (11.20s)
+#22 Accuracy: 84.33% (11.18s)
+#23 Accuracy: 84.21% (11.16s)
+#24 Accuracy: 84.35% (11.14s)
+#25 Accuracy: 84.15% (11.10s)
+#26 Accuracy: 84.13% (11.12s)
+#27 Accuracy: 84.16% (10.99s)
+#28 Accuracy: 84.25% (10.99s)
+#29 Accuracy: 84.24% (11.00s)
+#30 Accuracy: 84.50% (10.98s)
+#31 Accuracy: 84.24% (10.92s)
+#32 Accuracy: 84.12% (10.90s)
+#33 Accuracy: 84.12% (10.89s)
+#34 Accuracy: 84.22% (10.88s)
+#35 Accuracy: 84.50% (10.85s)
+#36 Accuracy: 84.09% (10.83s)
+#37 Accuracy: 84.90% (10.80s)
+#38 Accuracy: 84.16% (10.79s)
+#39 Accuracy: 83.98% (10.77s)
+#40 Accuracy: 84.27% (10.76s)
+#41 Accuracy: 84.34% (10.74s)
+#42 Accuracy: 84.28% (10.72s)
+#43 Accuracy: 84.34% (10.71s)
+#44 Accuracy: 84.28% (10.66s)
+#45 Accuracy: 84.28% (10.68s)
+#46 Accuracy: 84.21% (10.64s)
+#47 Accuracy: 84.37% (10.65s)
+#48 Accuracy: 84.37% (10.61s)
+#49 Accuracy: 83.96% (10.61s)
+#50 Accuracy: 84.50% (10.60s)
+Mean Accuracy: 84.50266429840141 
+
+Finished running.. 
+
+Loading training data..
+X_train.shape[0]:  60800
+X_train.shape[1]:  7
+X_train.shape[2]:  6
+X_train.shape[3]:  2 
+
+Loading test data..
+X_test.shape[0]:  6756
+X_test.shape[1]:  7
+X_test.shape[2]:  6
+X_test.shape[3]:  2 
+
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM with weighted clauses..
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 75.53% (14.66s)
+#2 Accuracy: 77.77% (13.33s)
+#3 Accuracy: 79.31% (12.81s)
+#4 Accuracy: 80.28% (12.53s)
+#5 Accuracy: 81.13% (12.33s)
+#6 Accuracy: 81.44% (12.13s)
+#7 Accuracy: 81.57% (11.99s)
+#8 Accuracy: 81.99% (11.81s)
+#9 Accuracy: 82.12% (11.73s)
+#10 Accuracy: 82.56% (11.66s)
+#11 Accuracy: 83.04% (11.57s)
+#12 Accuracy: 82.70% (11.54s)
+#13 Accuracy: 83.19% (11.44s)
+#14 Accuracy: 83.27% (11.46s)
+#15 Accuracy: 83.13% (11.40s)
+#16 Accuracy: 83.38% (11.40s)
+#17 Accuracy: 83.14% (11.30s)
+#18 Accuracy: 83.82% (11.25s)
+#19 Accuracy: 83.44% (11.25s)
+#20 Accuracy: 83.64% (11.22s)
+#21 Accuracy: 83.56% (11.13s)
+#22 Accuracy: 83.85% (11.18s)
+#23 Accuracy: 83.98% (11.34s)
+#24 Accuracy: 83.61% (11.12s)
+#25 Accuracy: 84.00% (11.11s)
+#26 Accuracy: 84.37% (11.06s)
+#27 Accuracy: 84.40% (11.06s)
+#28 Accuracy: 84.33% (11.07s)
+#29 Accuracy: 84.06% (11.02s)
+#30 Accuracy: 84.18% (11.00s)
+#31 Accuracy: 84.71% (10.94s)
+#32 Accuracy: 84.27% (10.89s)
+#33 Accuracy: 83.66% (10.87s)
+#34 Accuracy: 84.04% (10.87s)
+#35 Accuracy: 84.19% (10.83s)
+#36 Accuracy: 84.31% (10.81s)
+#37 Accuracy: 84.13% (10.79s)
+#38 Accuracy: 84.25% (10.79s)
+#39 Accuracy: 84.52% (10.78s)
+#40 Accuracy: 84.61% (10.79s)
+#41 Accuracy: 84.27% (10.76s)
+#42 Accuracy: 84.10% (10.74s)
+#43 Accuracy: 83.98% (10.71s)
+#44 Accuracy: 84.10% (10.68s)
+#45 Accuracy: 84.33% (10.65s)
+#46 Accuracy: 84.27% (10.66s)
+#47 Accuracy: 84.06% (10.69s)
+#48 Accuracy: 83.84% (10.68s)
+#49 Accuracy: 84.16% (10.65s)
+#50 Accuracy: 84.35% (10.60s)
+Mean Accuracy: 84.3546477205447 
+
+Finished running.. 
+
+Loading training data..
+X_train.shape[0]:  60801
+X_train.shape[1]:  7
+X_train.shape[2]:  6
+X_train.shape[3]:  2 
+
+Loading test data..
+X_test.shape[0]:  6755
+X_test.shape[1]:  7
+X_test.shape[2]:  6
+X_test.shape[3]:  2 
+
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM with weighted clauses..
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 75.16% (14.74s)
+#2 Accuracy: 78.00% (13.38s)
+#3 Accuracy: 79.53% (12.85s)
+#4 Accuracy: 80.52% (12.57s)
+#5 Accuracy: 80.86% (12.46s)
+#6 Accuracy: 81.73% (12.20s)
+#7 Accuracy: 81.58% (12.04s)
+#8 Accuracy: 81.95% (11.94s)
+#9 Accuracy: 83.02% (11.85s)
+#10 Accuracy: 82.69% (11.75s)
+#11 Accuracy: 83.17% (11.65s)
+#12 Accuracy: 82.78% (11.60s)
+#13 Accuracy: 83.29% (11.56s)
+#14 Accuracy: 83.38% (11.52s)
+#15 Accuracy: 83.77% (11.43s)
+#16 Accuracy: 83.63% (11.41s)
+#17 Accuracy: 83.54% (11.35s)
+#18 Accuracy: 84.37% (11.34s)
+#19 Accuracy: 83.73% (11.31s)
+#20 Accuracy: 84.00% (11.25s)
+#21 Accuracy: 84.40% (11.20s)
+#22 Accuracy: 84.65% (11.17s)
+#23 Accuracy: 83.98% (11.14s)
+#24 Accuracy: 84.13% (11.11s)
+#25 Accuracy: 84.20% (11.09s)
+#26 Accuracy: 84.16% (11.12s)
+#27 Accuracy: 84.17% (11.06s)
+#28 Accuracy: 84.25% (11.04s)
+#29 Accuracy: 84.52% (10.98s)
+#30 Accuracy: 84.96% (10.96s)
+#31 Accuracy: 84.28% (10.91s)
+#32 Accuracy: 84.60% (10.88s)
+#33 Accuracy: 84.19% (10.86s)
+#34 Accuracy: 84.69% (10.87s)
+#35 Accuracy: 84.47% (10.83s)
+#36 Accuracy: 84.07% (10.79s)
+#37 Accuracy: 84.46% (10.77s)
+#38 Accuracy: 84.17% (10.77s)
+#39 Accuracy: 84.46% (10.73s)
+#40 Accuracy: 84.28% (10.72s)
+#41 Accuracy: 84.32% (10.74s)
+#42 Accuracy: 84.35% (10.72s)
+#43 Accuracy: 84.34% (10.68s)
+#44 Accuracy: 84.26% (10.67s)
+#45 Accuracy: 84.62% (10.65s)
+#46 Accuracy: 84.72% (10.65s)
+#47 Accuracy: 84.81% (10.66s)
+#48 Accuracy: 84.71% (10.64s)
+#49 Accuracy: 84.16% (10.63s)
+#50 Accuracy: 84.40% (10.61s)
+Mean Accuracy: 84.39674315321983 
+
+Finished running.. 
+
+Loading training data..
+X_train.shape[0]:  60801
+X_train.shape[1]:  7
+X_train.shape[2]:  6
+X_train.shape[3]:  2 
+
+Loading test data..
+X_test.shape[0]:  6755
+X_test.shape[1]:  7
+X_test.shape[2]:  6
+X_test.shape[3]:  2 
+
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM with weighted clauses..
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 73.49% (14.62s)
+#2 Accuracy: 76.79% (13.30s)
+#3 Accuracy: 78.25% (12.80s)
+#4 Accuracy: 79.47% (12.50s)
+#5 Accuracy: 80.31% (12.32s)
+#6 Accuracy: 81.07% (12.17s)
+#7 Accuracy: 80.71% (12.03s)
+#8 Accuracy: 81.52% (11.94s)
+#9 Accuracy: 81.61% (11.86s)
+#10 Accuracy: 82.06% (11.78s)
+#11 Accuracy: 82.31% (11.70s)
+#12 Accuracy: 82.06% (11.56s)
+#13 Accuracy: 82.34% (11.56s)
+#14 Accuracy: 82.77% (11.48s)
+#15 Accuracy: 83.15% (11.43s)
+#16 Accuracy: 83.23% (11.35s)
+#17 Accuracy: 83.05% (11.31s)
+#18 Accuracy: 83.12% (11.29s)
+#19 Accuracy: 82.90% (11.24s)
+#20 Accuracy: 83.17% (11.21s)
+#21 Accuracy: 83.24% (11.47s)
+#22 Accuracy: 83.43% (11.22s)
+#23 Accuracy: 83.26% (11.12s)
+#24 Accuracy: 83.51% (11.09s)
+#25 Accuracy: 82.92% (11.10s)
+#26 Accuracy: 83.83% (11.03s)
+#27 Accuracy: 83.91% (11.02s)
+#28 Accuracy: 83.58% (10.98s)
+#29 Accuracy: 83.35% (10.97s)
+#30 Accuracy: 83.91% (10.95s)
+#31 Accuracy: 83.49% (10.94s)
+#32 Accuracy: 83.57% (10.93s)
+#33 Accuracy: 83.61% (10.93s)
+#34 Accuracy: 83.66% (10.96s)
+#35 Accuracy: 83.45% (10.97s)
+#36 Accuracy: 83.52% (10.80s)
+#37 Accuracy: 83.32% (10.84s)
+#38 Accuracy: 83.83% (10.77s)
+#39 Accuracy: 83.80% (10.76s)
+#40 Accuracy: 83.58% (10.75s)
+#41 Accuracy: 83.63% (10.71s)
+#42 Accuracy: 83.36% (10.72s)
+#43 Accuracy: 83.66% (10.69s)
+#44 Accuracy: 83.23% (10.67s)
+#45 Accuracy: 83.63% (10.66s)
+#46 Accuracy: 83.89% (10.65s)
+#47 Accuracy: 83.30% (10.63s)
+#48 Accuracy: 83.58% (10.61s)
+#49 Accuracy: 83.43% (10.60s)
+#50 Accuracy: 83.40% (10.59s)
+Mean Accuracy: 83.40488527017025 
+
+Finished running.. 
+
+Loading training data..
+X_train.shape[0]:  60801
+X_train.shape[1]:  7
+X_train.shape[2]:  6
+X_train.shape[3]:  2 
+
+Loading test data..
+X_test.shape[0]:  6755
+X_test.shape[1]:  7
+X_test.shape[2]:  6
+X_test.shape[3]:  2 
+
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM with weighted clauses..
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 74.74% (14.71s)
+#2 Accuracy: 78.22% (13.36s)
+#3 Accuracy: 79.63% (12.84s)
+#4 Accuracy: 80.38% (12.55s)
+#5 Accuracy: 81.26% (12.33s)
+#6 Accuracy: 81.58% (12.17s)
+#7 Accuracy: 82.12% (12.07s)
+#8 Accuracy: 82.29% (11.93s)
+#9 Accuracy: 82.77% (11.86s)
+#10 Accuracy: 83.14% (11.77s)
+#11 Accuracy: 83.43% (11.66s)
+#12 Accuracy: 83.36% (11.68s)
+#13 Accuracy: 83.54% (11.56s)
+#14 Accuracy: 83.79% (11.44s)
+#15 Accuracy: 83.85% (11.44s)
+#16 Accuracy: 83.97% (11.36s)
+#17 Accuracy: 84.16% (11.34s)
+#18 Accuracy: 84.46% (11.28s)
+#19 Accuracy: 84.60% (11.21s)
+#20 Accuracy: 84.60% (11.24s)
+#21 Accuracy: 84.38% (11.19s)
+#22 Accuracy: 84.17% (11.15s)
+#23 Accuracy: 84.57% (11.21s)
+#24 Accuracy: 84.60% (11.19s)
+#25 Accuracy: 84.59% (11.17s)
+#26 Accuracy: 84.59% (11.07s)
+#27 Accuracy: 84.94% (11.06s)
+#28 Accuracy: 84.46% (11.08s)
+#29 Accuracy: 84.89% (11.11s)
+#30 Accuracy: 84.80% (11.32s)
+#31 Accuracy: 84.31% (10.89s)
+#32 Accuracy: 84.78% (10.99s)
+#33 Accuracy: 84.81% (11.28s)
+#34 Accuracy: 84.80% (11.14s)
+#35 Accuracy: 84.65% (10.82s)
+#36 Accuracy: 84.62% (10.83s)
+#37 Accuracy: 84.81% (10.79s)
+#38 Accuracy: 85.06% (10.77s)
+#39 Accuracy: 85.00% (10.76s)
+#40 Accuracy: 84.80% (10.73s)
+#41 Accuracy: 84.66% (10.68s)
+#42 Accuracy: 84.93% (10.70s)
+#43 Accuracy: 84.46% (10.71s)
+#44 Accuracy: 84.20% (10.68s)
+#45 Accuracy: 84.87% (10.68s)
+#46 Accuracy: 84.68% (10.63s)
+#47 Accuracy: 84.78% (10.59s)
+#48 Accuracy: 84.65% (10.60s)
+#49 Accuracy: 84.59% (10.59s)
+#50 Accuracy: 84.83% (10.57s)
+Mean Accuracy: 84.8260547742413 
+
+Finished running.. 
+
+Loading training data..
+X_train.shape[0]:  60801
+X_train.shape[1]:  7
+X_train.shape[2]:  6
+X_train.shape[3]:  2 
+
+Loading test data..
+X_test.shape[0]:  6755
+X_test.shape[1]:  7
+X_test.shape[2]:  6
+X_test.shape[3]:  2 
+
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM with weighted clauses..
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 74.29% (14.64s)
+#2 Accuracy: 77.19% (13.56s)
+#3 Accuracy: 78.45% (12.88s)
+#4 Accuracy: 79.72% (12.57s)
+#5 Accuracy: 80.28% (12.33s)
+#6 Accuracy: 80.61% (12.11s)
+#7 Accuracy: 81.05% (12.02s)
+#8 Accuracy: 81.41% (11.95s)
+#9 Accuracy: 81.85% (11.85s)
+#10 Accuracy: 82.09% (11.78s)
+#11 Accuracy: 82.44% (11.72s)
+#12 Accuracy: 82.25% (11.66s)
+#13 Accuracy: 82.80% (11.58s)
+#14 Accuracy: 82.55% (11.53s)
+#15 Accuracy: 82.80% (11.50s)
+#16 Accuracy: 83.14% (11.42s)
+#17 Accuracy: 83.27% (11.39s)
+#18 Accuracy: 83.02% (11.33s)
+#19 Accuracy: 83.23% (11.29s)
+#20 Accuracy: 82.98% (11.24s)
+#21 Accuracy: 83.06% (11.22s)
+#22 Accuracy: 83.49% (11.19s)
+#23 Accuracy: 83.83% (11.13s)
+#24 Accuracy: 83.80% (11.10s)
+#25 Accuracy: 83.43% (11.07s)
+#26 Accuracy: 83.09% (11.03s)
+#27 Accuracy: 83.42% (10.96s)
+#28 Accuracy: 82.47% (10.96s)
+#29 Accuracy: 83.51% (10.94s)
+#30 Accuracy: 83.79% (10.92s)
+#31 Accuracy: 84.04% (10.92s)
+#32 Accuracy: 83.23% (10.89s)
+#33 Accuracy: 83.20% (10.86s)
+#34 Accuracy: 83.49% (10.84s)
+#35 Accuracy: 83.64% (10.83s)
+#36 Accuracy: 83.89% (10.79s)
+#37 Accuracy: 83.55% (10.75s)
+#38 Accuracy: 83.88% (10.73s)
+#39 Accuracy: 83.77% (10.71s)
+#40 Accuracy: 83.88% (10.66s)
+#41 Accuracy: 84.35% (10.67s)
+#42 Accuracy: 83.69% (10.68s)
+#43 Accuracy: 83.82% (10.65s)
+#44 Accuracy: 83.03% (10.67s)
+#45 Accuracy: 83.11% (10.63s)
+#46 Accuracy: 83.35% (10.62s)
+#47 Accuracy: 83.70% (10.60s)
+#48 Accuracy: 83.97% (10.62s)
+#49 Accuracy: 83.23% (10.59s)
+#50 Accuracy: 83.60% (10.57s)
+Mean Accuracy: 83.59733530717986 
+
+Finished running.. 
+
+Loading training data..
+X_train.shape[0]:  60802
+X_train.shape[1]:  7
+X_train.shape[2]:  6
+X_train.shape[3]:  2 
+
+Loading test data..
+X_test.shape[0]:  6754
+X_test.shape[1]:  7
+X_test.shape[2]:  6
+X_test.shape[3]:  2 
+
+Creating MultiClass Convolutional Tsetlin Machine.
+Starting ConvTM with weighted clauses..
+
+Accuracy over 50 epochs:
+
+#1 Accuracy: 73.59% (14.65s)
+#2 Accuracy: 78.37% (13.26s)
+#3 Accuracy: 79.21% (12.75s)
+#4 Accuracy: 80.25% (12.52s)
+#5 Accuracy: 80.69% (12.30s)
+#6 Accuracy: 81.89% (12.12s)
+#7 Accuracy: 81.73% (12.00s)
+#8 Accuracy: 82.03% (11.90s)
+#9 Accuracy: 82.90% (11.80s)
+#10 Accuracy: 82.17% (11.73s)
+#11 Accuracy: 82.94% (11.66s)
+#12 Accuracy: 82.78% (11.63s)
+#13 Accuracy: 82.94% (11.56s)
+#14 Accuracy: 83.27% (11.49s)
+#15 Accuracy: 83.65% (11.47s)
+#16 Accuracy: 83.42% (11.40s)
+#17 Accuracy: 83.74% (11.36s)
+#18 Accuracy: 83.36% (11.31s)
+#19 Accuracy: 84.01% (11.31s)
+#20 Accuracy: 83.76% (11.24s)
+#21 Accuracy: 83.59% (11.24s)
+#22 Accuracy: 84.02% (11.17s)
+#23 Accuracy: 83.70% (11.16s)
+#24 Accuracy: 84.13% (11.11s)
+#25 Accuracy: 83.92% (11.10s)
+#26 Accuracy: 83.95% (11.06s)
+#27 Accuracy: 84.44% (11.03s)
+#28 Accuracy: 84.45% (11.02s)
+#29 Accuracy: 84.19% (10.99s)
+#30 Accuracy: 84.29% (11.06s)
+#31 Accuracy: 84.68% (10.92s)
+#32 Accuracy: 84.38% (10.92s)
+#33 Accuracy: 84.26% (10.87s)
+#34 Accuracy: 84.62% (10.88s)
+#35 Accuracy: 84.69% (10.86s)
+#36 Accuracy: 84.75% (10.82s)
+#37 Accuracy: 84.84% (10.81s)
+#38 Accuracy: 84.02% (10.80s)
+#39 Accuracy: 84.54% (10.75s)
+#40 Accuracy: 84.75% (10.71s)
+#41 Accuracy: 84.51% (10.70s)
+#42 Accuracy: 84.45% (10.68s)
+#43 Accuracy: 84.76% (10.69s)
+#44 Accuracy: 84.42% (10.62s)
+#45 Accuracy: 84.57% (10.64s)
+#46 Accuracy: 84.34% (10.66s)
+#47 Accuracy: 84.73% (10.59s)
+#48 Accuracy: 84.62% (10.61s)
+#49 Accuracy: 84.69% (10.61s)
+#50 Accuracy: 84.88% (10.62s)
+Mean Accuracy: 84.8830322771691 
+
+Finished running.. 
+
+[83.49859405061419, 83.54299245227172, 83.2445233866193, 84.50266429840141, 84.3546477205447, 84.39674315321983, 83.40488527017025, 84.8260547742413, 83.59733530717986, 84.8830322771691]
+
+Process finished with exit code 0
+

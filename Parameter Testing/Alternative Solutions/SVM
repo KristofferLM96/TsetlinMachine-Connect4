@@ -1,0 +1,26 @@
+/usr/bin/python3.6 /home/kristoffer/Documents/IKT442_Workspace/Tsetlin-Machine-Connect4/TsetlinMachine-Connect4/Connect4.py
+Running k-fold -  1
+Accuracy: 84.91934290365548
+Running k-fold -  2
+Accuracy: 84.72694982980613
+Running k-fold -  3
+Accuracy: 84.22143280047365
+Running k-fold -  4
+Accuracy: 85.02072232089995
+Running k-fold -  5
+Accuracy: 85.39076376554175
+Running k-fold -  6
+Accuracy: 85.59585492227978
+Running k-fold -  7
+Accuracy: 84.54478164322724
+Running k-fold -  8
+Accuracy: 85.84752035529237
+Running k-fold -  9
+Accuracy: 85.06291635825315
+Running k-fold -  10
+Accuracy: 85.51969203435002
+[84.91934290365548, 84.72694982980613, 84.22143280047365, 85.02072232089995, 85.39076376554175, 85.59585492227978, 84.54478164322724, 85.84752035529237, 85.06291635825315, 85.51969203435002]
+Mean Accuracy for  10  k-folds:  85.08499769337796  %
+
+Process finished with exit code 0
+
