@@ -1,3 +1,5 @@
+import csv
+
 shape_y = 6
 shape_x = 7
 shape_z = 2
@@ -5,6 +7,7 @@ window_x = 4
 window_y = 4
 
 
+"""
 def Rearrange(WrongList):
     output = []
     for column in range(shape_y):
@@ -14,6 +17,7 @@ def Rearrange(WrongList):
             # print(index)
             output.append(WrongList[index - 1])
     return output
+"""
 
 
 def transform(input):
@@ -21,9 +25,9 @@ def transform(input):
     if (int(input[0]) and int(input[2])) or (int(input[1]) and int(input[3])):
         return "Fa"
     elif int(input[0]) and int(input[1]):
-        return "#"
+        return "+#"
     elif int(input[2]) and int(input[3]):
-        return "b"
+        return "-#"
     elif int(input[0]):
         return "+X"
     elif int(input[1]):
@@ -33,7 +37,7 @@ def transform(input):
     elif int(input[3]):
         return "-o"
     else:
-        return "*"
+        return "*#"
 
 
 def GetOutput(tm, tm_class, clause):
@@ -72,18 +76,18 @@ def Align(tm, tm_class, clause):
     print(output)
     nonNegated = output[:int(len(output) / 2)]
     negated = output[int(len(output) / 2):]
-    xbit = Rearrange(nonNegated[:int(len(nonNegated) / 2)])
-    obit = Rearrange(nonNegated[int(len(nonNegated) / 2):])
-    nxbit = Rearrange(negated[:int(len(negated) / 2)])
-    nobit = Rearrange(negated[int(len(negated) / 2):])
+    xbit = nonNegated[:int(len(nonNegated) / 2)]
+    obit = nonNegated[int(len(nonNegated) / 2):]
+    nxbit = negated[:int(len(negated) / 2)]
+    nobit = negated[int(len(negated) / 2):]
     board = []
     for i in range(window_x * window_y):
         print(i)
-        # resultclauses.write(str(xbit[i]) + str(obit[i]) + str(nxbit[i]) + str(nobit[i]))
+        print(str(xbit[i]) + str(obit[i]) + str(nxbit[i]) + str(nobit[i]))
         if i < (window_x * window_y) - 1:
-            resultclauses.write(",")
+            print(",")
         else:
-            resultclauses.write("\n")
+            print("\n")
 
 
 def PrintClause(clause):
@@ -99,19 +103,31 @@ def PrintClass(Ts, Class, clauses):
         # PrintClause(action)
 
 
-PrintClass(tm, 1, clauses)
-resultclauses.close()
+# PrintClass(tm, 1, clauses)
 
-with open("3Dresults/2D" + timestr + "clauses.csv") as f:
+
+"""
+3Dcnn20191218-144219clauses0.csv
+3Dcnn20191218-144219clauses1.csv
+3Dcnn20191218-144219clauses2.csv
+"""
+with open("Data/3Dcnn20191218-144219clauses2.csv") as f:
     reader = csv.reader(f)
     table = []
     for row in reader:
         table.append(row)
-    print(table[1])
-    for i in range(6):
-        temp = ""
-        for j in range(7):
-            temp = temp + transform(table[1][i * 7 + j]) + " "
-            # print(i*7+j)
-        print(temp)
-
+    index = 1
+    for index in range(1000):
+        if index % 2:
+            print("---| Negated |---")
+        else:
+            print("---| Non-Negated |---")
+        print(table[index])
+        for i in range(window_y):
+            temp = ""
+            for j in range(window_x):
+                temp = temp + transform(table[index][i * window_x + j]) + " "
+                # print(i*7+j)
+            print(temp)
+        print("\n")
+        index = index + 1
