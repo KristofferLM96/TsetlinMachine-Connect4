@@ -88,6 +88,10 @@ with open("Data/2D1218-0437clauses1.csv") as f:
         table.append(row)
     index = 1
     for index in range(1000):
+        if index % 2:
+            print("---| Negated |---")
+        else:
+            print("---| Non-Negated |---")
         print(table[index])
         for i in range(6):
             temp = ""
