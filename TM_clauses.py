@@ -1,9 +1,9 @@
 import csv
 
-shape_y = 6
-shape_x = 7
+# shape_y = 6
+# shape_x = 7
 
-
+"""
 def Rearrange(WrongList):
     output = []
     for column in range(shape_y):
@@ -13,6 +13,7 @@ def Rearrange(WrongList):
             # print(index)
             output.append(WrongList[index - 1])
     return output
+"""
 
 
 def transform(input):
@@ -75,13 +76,18 @@ def PrintClass(Ts, Class, clauses):
 
 # PrintClass(tm, 1, clauses)
 
+"""
+Data/2D1218-0437clauses0.csv
+Data/2D1218-0437clauses1.csv
+Data/2D1218-0437clauses2.csv
+"""
 with open("Data/2D1218-0437clauses1.csv") as f:
     reader = csv.reader(f)
     table = []
     for row in reader:
         table.append(row)
     index = 1
-    for index in range(100):
+    for index in range(1000):
         print(table[index])
         for i in range(6):
             temp = ""
