@@ -81,7 +81,7 @@ Data/2D1218-0437clauses0.csv
 Data/2D1218-0437clauses1.csv
 Data/2D1218-0437clauses2.csv
 """
-with open("Data/2D1218-0437clauses1.csv") as f:
+with open("Data/2D1218-0437clauses2.csv") as f:
     reader = csv.reader(f)
     table = []
     for row in reader:
