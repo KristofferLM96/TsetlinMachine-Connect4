@@ -5,9 +5,9 @@ from time import time
 # Parameters
 # split_ratio = 0.9
 epochs = 50
-clauses = 4000
-T = 8800
-s = 27
+clauses = 1000
+T = 241
+s = 176
 k_fold_amount = 10
 
 print("epochs = ", epochs)
